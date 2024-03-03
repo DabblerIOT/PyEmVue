@@ -101,7 +101,7 @@ class PyEmVue(object):
         retries = 0
         success = False
         
-        while ((retries <= 5) and (success == False)):
+        while ((retries <= 10) and (success == False)):
             #Is this proper way to delay?   Functions that call this function are async.
             if (retries > 0): time.sleep(min(10,(retries*2)))
             
